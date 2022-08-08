@@ -1,0 +1,310 @@
+/* 
+    Created At 08 07 2022 
+    Author : Budiliauw87
+    Email : Budiliauw87@gmail.com
+    This project for Task Dicoding.com
+*/
+
+@font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/oswald-v31-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: local(''), url('../fonts/oswald-v31-latin-regular.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */
+    url('../fonts/oswald-v31-latin-regular.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../fonts/oswald-v31-latin-regular.woff') format('woff'),
+    /* Modern Browsers */
+    url('../fonts/oswald-v31-latin-regular.ttf') format('truetype'),
+    /* Safari, Android, iOS */
+    url('../fonts/oswald-v31-latin-regular.svg#Oswald') format('svg');
+    /* Legacy iOS */
+}
+
+
+/* roboto-300 - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/roboto-v20-latin-300.eot'); /* IE9 Compat Modes */
+    src: local('Roboto Light'), local('Roboto-Light'),
+         url('../fonts/roboto-v20-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/roboto-v20-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/roboto-v20-latin-300.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/roboto-v20-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/roboto-v20-latin-300.svg#Roboto') format('svg'); /* Legacy iOS */
+  }
+  /* roboto-regular - latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/roboto-v20-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local('Roboto'), local('Roboto-Regular'),
+         url('../fonts/roboto-v20-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/roboto-v20-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/roboto-v20-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/roboto-v20-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/roboto-v20-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+  }
+  /* roboto-500 - latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/roboto-v20-latin-500.eot'); /* IE9 Compat Modes */
+    src: local('Roboto Medium'), local('Roboto-Medium'),
+         url('../fonts/roboto-v20-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/roboto-v20-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/roboto-v20-latin-500.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/roboto-v20-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/roboto-v20-latin-500.svg#Roboto') format('svg'); /* Legacy iOS */
+  }
+  /* roboto-700 - latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/roboto-v20-latin-700.eot'); /* IE9 Compat Modes */
+    src: local('Roboto Bold'), local('Roboto-Bold'),
+         url('../fonts/roboto-v20-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/roboto-v20-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/roboto-v20-latin-700.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/roboto-v20-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/roboto-v20-latin-700.svg#Roboto') format('svg'); /* Legacy iOS */
+  }
+/* Global */
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    min-height: -webkit-fill-available;
+}
+body {
+    font-family: "Oswald";
+    display: flex;
+    flex-direction: column;
+}
+a,button{
+	font-weight: 500;
+	text-decoration: none;
+}
+
+/* Header Style */
+header{
+    background-image: linear-gradient(180deg, #4c4644, #201e1e);
+    display: flex;
+    width: 100%;
+    flex-direction: inherit;
+    align-items: center;
+}
+header .title{
+    display: flex;
+	font-size: 1.5rem;
+    text-transform: uppercase;
+    padding-top: 30px;
+    align-items: center;
+    color:white;
+}
+header .note-search{
+    width: 25%;
+    padding: 18px 0;
+}
+.note-search input{
+    width: 100%;
+    margin: 8px 0;
+    box-sizing: border-box;
+    padding:13px;
+    border-radius: 20px;
+}
+
+article {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+main {
+    flex-grow: 1;
+    margin: 0 auto;
+}
+
+header, main, footer {
+    flex-shrink: 0;
+}
+main h2{
+    padding: 30px 50px 0px 50px;
+}
+section {
+    padding: 30px 50px 0 50px;
+}
+
+button{
+    padding: 5px 8px;
+    flex: 1;
+}
+
+/* Footer */
+footer{
+    width: 100%;
+    color: white;
+    background: black;
+    padding: 20px;
+    text-align: center;
+}
+footer a{
+    color:white;
+}
+
+.note-list{
+    grid-gap: 16px;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(4,1fr);
+}
+.card-note{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: auto;
+    min-height: 100px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 0 10px 10px 0;
+    -webkit-box-shadow: 0 14px 26px -12px rgba(47, 9, 150, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(47, 9, 150, 0.2)  !important;
+    box-shadow: 0 14px 26px -12px rgba(47, 9, 150, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(47, 9, 150, 0.2) !important
+}
+.card-title{
+    font-family: "Roboto";
+}
+.card-date{
+    color: #555;
+    font-size: 12px;
+    margin-top:5px;
+    margin-bottom: 8px
+}
+.card-body{
+    flex: 1 1;
+    font-size: 1rem;
+    font-family: "Roboto";
+}
+.card-action{
+    margin-top: 20px;
+    display: flex;
+}
+.empty_list_message{
+    display: block;
+    color:rgb(143, 143, 143);
+    margin:30px auto;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.note-input {
+    margin: 0 auto;
+    margin-top: 20px;
+    padding:1.5rem;
+    background-color: #fff;
+    border-radius: 10px;
+    max-width: 500px;
+    -webkit-box-shadow: 0 14px 26px -12px rgba(47, 9, 150, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(47, 9, 150, 0.2)  !important;
+    box-shadow: 0 14px 26px -12px rgba(47, 9, 150, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(47, 9, 150, 0.2) !important
+}
+
+.note-input input,textarea,button{
+    width: 100%;
+    margin: 8px 0;
+    box-sizing: border-box;
+    padding:13px;
+    border-radius: 5px;
+}
+.title_limit_char{
+    font-size: 1rem;
+    text-align: right;
+    color: #555;
+}
+.note-input textarea {
+    min-height: 150px;
+}
+.title_create{
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Other */
+.mt-1{
+    margin-top:1rem !important;
+}
+.mt-2{
+    margin-top:2rem !important;
+}
+.mt-3{
+    margin-top:2.5rem !important;
+}
+.mb-1{
+    margin-bottom:1rem !important;
+}
+.mb-2{
+    margin-bottom:2rem !important;
+}
+.mb-3{
+    margin-bottom:2.5rem !important;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 640px) {
+    header .note-search{
+        width: 60%;
+        padding: 18px 0;
+    }
+    section {
+        padding: 15px 10px;
+    }
+    main h2{
+        padding: 30px 10px 0 30px;
+    }
+    .note-list{
+        grid-template-columns: repeat(2,1fr);
+       
+    }
+ }
+ @media screen and (min-width: 641px) and (max-width: 800px) {
+    header .note-search{
+        width: 50%;
+        padding: 18px 0;
+    }
+    section {
+        padding: 15px 20px;
+    }
+    main h2{
+        padding: 30px 10px 0 30px;
+    }
+    .note-list{
+        grid-template-columns: repeat(2,1fr);
+    }
+ }
+ @media screen and (min-width: 801px) and (max-width: 1024px) {
+    header .note-search{
+        width: 40%;
+        padding: 18px 0;
+    }
+    section {
+        padding: 15px 20px;
+    }
+    main h2{
+        padding: 30px 10px 0 30px;
+    }
+    .note-list{
+        grid-template-columns: repeat(3,1fr);
+    }
+ }
